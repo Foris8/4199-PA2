@@ -19,19 +19,19 @@ The GBN node will compute the loss rate and conduct GBN algorithm. The sample te
 The algorithm will start to compute when the input from users contains "last". The routing table of each node will start to update when there is an change in routing table. The timestamp is used to record the information exchange. The routing table will stop to change when the routing table converges.
 
 To start the algorithm, the user has to open four terminals and input the following command.
-$ ./dvnode 1111 2222 .1 3333 .5
-$ ./dvnode 2222 1111 .1 3333 .2 4444 .8
-$ ./dvnode 3333 1111 .5 2222 .2 4444 .5
-$ ./dvnode 4444 2222 .8 3333 .5 last
+python3 dvnode.py 1111 2222 .1 3333 .5
+python3 dvnode.py 2222 1111 .1 3333 .2 4444 .8
+python3 dvnode.py 3333 1111 .5 2222 .2 4444 .5
+python3 dvnode.py 4444 2222 .8 3333 .5 last
 
 4. Combination
 In this problem, I have to combine GBN node and DV node together to update the routing table while sending prob packets to the other router. The DV table will update for every 5 seconds or if there is any change in the routing table. And the link cost will be updated in a fixed interval.
 
 To start the algorithm, the user has to open four terminals and input the following command:
 
-$ ./cnnode 1111 receive send 2222 3333
-$ ./cnnode 2222 receive 1111 .1 send 3333 4444
-$ ./cnnode 3333 receive 1111 .5 2222 .2 send 4444
-$ ./cnnode 4444 receive 2222 .8 3333 .5 send last 
+python3 cnnode.py 1111 receive send 2222 3333
+python3 cnnode.py 2222 receive 1111 .1 send 3333 4444
+python3 cnnode.py 3333 receive 1111 .5 2222 .2 send 4444
+python3 cnnode.py 4444 receive 2222 .8 3333 .5 send last 
 
 The DV node and GBN node will start to run when the last command input
