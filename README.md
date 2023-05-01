@@ -24,7 +24,8 @@ python3 dvnode.py 2222 1111 .1 3333 .2 4444 .8
 python3 dvnode.py 3333 1111 .5 2222 .2 4444 .5
 python3 dvnode.py 4444 2222 .8 3333 .5 last
 
-4. Combination
+4. Combination - It takes time to converge!!!!!!!
+
 In this problem, I have to combine GBN node and DV node together to update the routing table while sending prob packets to the other router. The DV table will update for every 5 seconds or if there is any change in the routing table. And the link cost will be updated in a fixed interval.
 
 To start the algorithm, the user has to open four terminals and input the following command:
